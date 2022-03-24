@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Timeline</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 mt-4 py-4">
+                <h1 class="display-1 fw-bold">Línea del Tiempo</h1>
+                <p class="text-muted">Podrás realizar sencillas y simples lineas del tiempo con tan solo unos clics</p>
+            </div>
+
+            <div class="col-12 mt-4 py-4 parameters d-none">
+                <h1 class="display-6 fw-bold">Cambia algunos parámetros</h1>
+                <p class="text-muted">Modifica y dale estilo a diferentes parámetros de tu linea del tiempo</p>
+                <div class="row justify-content-around">
+                    <div class="col-2 p-2 min-h-100">
+                        <div class="d-flex flex-column align-items-center gap-4">
+
+                            <p class="m-0 fw-bold">Línea</p>
+                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
+                                name="color" id="color-line">
+
+                            <div class="line"></div>
+                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-color">Cambiar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-2 p-2 h-100">
+                        <div class="d-flex flex-column align-items-center gap-4">
+
+                            <p class="m-0 fw-bold">Año</p>
+                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
+                                name="color" id="color-year">
+
+                            <p class="m-0 fw-bold year">1453</p>
+                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-year">Cambiar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-2 p-2 h-100">
+                        <div class="d-flex flex-column align-items-center gap-4">
+
+                            <p class="m-0 fw-bold">Título</p>
+                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
+                                name="color" id="color-title">
+
+                            <p class="m-0 fw-bold title">Termina edad media..</p>
+                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-title">Cambiar</button>
+                        </div>
+                    </div>
+
+                    <div class="col-2 p-2 h-100">
+                        <div class="d-flex flex-column align-items-center gap-4">
+
+                            <p class="m-0 fw-bold">Cuerpo de texto</p>
+                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
+                                name="color" id="color-text">
+                            <p class="m-0 text">La edad media termina...</p>
+                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-text">Cambiar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12" id="capture">
+                <div id="title-timeline" contenteditable="true" class="display-1 fw-bold title">La edad media</div>
+                <div id="timeline" class="d-flex justify-content-center align-content-stretch flex-wrap">
+
+                </div>
+            </div>
+            <div class="col-12 my-4 text-center">
+                <button id="add-item" class="btn btn-sm btn-light mt-4 fw-bold" type="button">Agregar un nuevo evento <i class="ms-2 bi bi-plus"></i></button>
+                <button id="btn-capture" class="btn btn-sm btn-light mt-4 fw-bold d-none">Descargar <i class="ms-2 bi bi-download"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-column min-vh-100 justify-content-end">
+        <div class="row">
+            <div class="accordion accordion-flush p-0 m-0" id="accordionFlushExample">
+                <div class="accordion-item p-0 m-0">
+                    <h2 class="accordion-header p-0 m-0 text-center bg-light" id="flush-headingOne">
+                        <div class="text-center d-flex flex-column p-2">
+                            <button class="btn-more btn btn-sm btn-light collapsed fw-bold rounded-0" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Show More
+                            </button>
+                            <i class="bi bi-chevron-down fs-6 p-0 m-0"></i>
+                        </div>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0 m-0">
+                            <div class="row m-0 mt-auto mb-0 p-4 bg-light bg-gradient justify-content-between">
+                                <div class="col-lg-3 col-6 mt-4">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="text-normal">
+                                            <i class="bi bi-github display-1"></i>
+                                        </div>
+                                        <div class="text-normal">
+                                            <p class="m-0 fs-4 p-0"><a class="text-dark fw-bold"
+                                                    href="https://github.com/pasabaa" target="blank">pasabaa</a> on</p>
+                                            <p class="display-4 fw-bold m-0 p-0">GitHub</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-6 mt-4">
+                                    <div class="d-flex align-items-start gap-2">
+                                        <div class="text-normal">
+                                            <p class="m-0 fs-4 p-0 text-muted">Social</p>
+                                            <p class="display-4 fw-bold m-0 p-0">Media</p>
+                                            <div class="d-flex justify-content-around gap-2">
+                                                <a class="text-instagram text-decoration-none fs-2" target="blank"
+                                                    href="https://pasabaa.github.io/gallery-fetch/"><i
+                                                        class="bi bi-instagram"></i></a>
+                                                <a class="text-twitter text-decoration-none fs-2" target="blank"
+                                                    href="https://pasabaa.github.io/change-color/"><i
+                                                        class="bi bi-twitter"></i></a>
+                                                <a class="text-twitch text-decoration-none fs-2" target="blank"
+                                                    href="https://pasabaa.github.io/forms/"><i
+                                                        class="bi bi-twitch"></i></a>
+                                                <a class="text-reddit text-decoration-none fs-2" target="blank"
+                                                    href="https://pasabaa.github.io/scroll-animate/"><i
+                                                        class="bi bi-reddit"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-6 fs-sm mt-4">
+                                    <p class="fw-bold">More Projects</p>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/gallery-fetch/">Gallery Fetch</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/change-color/">Change Color</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/forms/">Simple Forms</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/scroll-animate/">Scroll Animate</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-6 fs-sm mt-4">
+                                    <p class="fw-bold">Projects CSS</p>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/gallery-fetch/">Gallery Fetch</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/change-color/">Change Color</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/forms/">Simple Forms</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/scroll-animate/">Scroll Animate</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-6 fs-sm mt-4">
+                                    <p class="fw-bold">Projects JS</p>
+                                    <div class="d-flex flex-column gap-2">
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/gallery-fetch/">Gallery Fetch</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/change-color/">Change Color</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/forms/">Simple Forms</a>
+                                        <a class="text-muted text-decoration-none" target="blank"
+                                            href="https://pasabaa.github.io/scroll-animate/">Scroll Animate</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="js/app.js" defer></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+
+</html>
