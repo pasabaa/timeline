@@ -5,7 +5,11 @@ let btnModal = document.querySelector('#btn-modal');
 
 let titleTimeline = document.querySelector('#title-timeline');
 
-const btnDownload = document.querySelector('#btn-capture')
+const btnDownload = document.querySelector('#btn-capture');
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     alert('Hola');
+// });
 
 btnDownload.addEventListener('click', capture);
 

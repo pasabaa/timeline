@@ -69,3 +69,13 @@ body {
     background-color: rgba(220, 220, 220, 0.5);
     backdrop-filter: blur(10px);
 }
+
+.modal-backdrop {
+    background-color: rgba(220, 220, 220, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1040;
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+}
