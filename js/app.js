@@ -1,6 +1,7 @@
 let timeline = document.querySelector('#timeline');
 let btnAdd = document.querySelector('#add-item');
 let parameters = document.querySelector('.parameters');
+let btnModal = document.querySelector('#btn-modal');
 
 let titleTimeline = document.querySelector('#title-timeline');
 
@@ -126,9 +127,8 @@ btnAdd.addEventListener('click', () => {
 
     });
 
-    parameters.classList.remove('d-none');
     btnDownload.classList.remove('d-none');
-
+    btnModal.classList.remove('d-none');
     btnAdd.classList.add('d-none');
 
 });

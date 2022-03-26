@@ -23,61 +23,96 @@
                 <p class="text-muted">Podrás realizar sencillas y simples lineas del tiempo con tan solo unos clics</p>
             </div>
 
-            <div class="col-12 mt-4 py-4 parameters d-none">
-                <h1 class="display-6 fw-bold">Cambia algunos parámetros</h1>
-                <p class="text-muted">Modifica y dale estilo a diferentes parámetros de tu linea del tiempo</p>
-                <div class="row justify-content-around">
-                    <div class="col-2 p-2 min-h-100">
-                        <div class="d-flex flex-column align-items-center gap-4">
+            <div class="col-12">
+                <!-- Modal -->
+                <div class="modal fade bg-dark-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body p-4">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 parameters">
+                                        <h1 class="display-6 fw-bold">Cambia algunos parámetros</h1>
+                                        <p class="text-muted">Modifica y dale estilo a diferentes parámetros de tu linea
+                                            del tiempo</p>
+                                        <div class="row justify-content-around">
+                                            <div class="col-2 p-2 min-h-100">
+                                                <div class="d-flex flex-column align-items-center gap-4">
 
-                            <p class="m-0 fw-bold">Línea</p>
-                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
-                                name="color" id="color-line">
+                                                    <p class="m-0 fw-bold">Línea</p>
+                                                    <input
+                                                        class="form-control form-control-color border-0 bg-transparent"
+                                                        type="color" name="color" id="color-line">
+                                                    <button class="btn btn-sm btn-dark mt-2" type="button"
+                                                        id="change-color">Cambiar</button>
+                                                </div>
+                                            </div>
 
-                            <div class="line"></div>
-                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-color">Cambiar</button>
+                                            <div class="col-2 p-2 h-100">
+                                                <div class="d-flex flex-column align-items-center gap-4">
+
+                                                    <p class="m-0 fw-bold">Año</p>
+                                                    <input
+                                                        class="form-control form-control-color border-0 bg-transparent"
+                                                        type="color" name="color" id="color-year">
+                                                    <button class="btn btn-sm btn-dark mt-2" type="button"
+                                                        id="change-year">Cambiar</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-2 p-2 h-100">
+                                                <div class="d-flex flex-column align-items-center gap-4">
+
+                                                    <p class="m-0 fw-bold">Título</p>
+                                                    <input
+                                                        class="form-control form-control-color border-0 bg-transparent"
+                                                        type="color" name="color" id="color-title">
+                                                    <button class="btn btn-sm btn-dark mt-2" type="button"
+                                                        id="change-title">Cambiar</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-2 p-2 h-100">
+                                                <div class="d-flex flex-column align-items-center gap-4">
+                                                    <p class="m-0 fw-bold">Texto</p>
+                                                    <input
+                                                        class="form-control form-control-color border-0 bg-transparent"
+                                                        type="color" name="color" id="color-text">
+                                                    <button class="btn btn-sm btn-dark mt-2" type="button"
+                                                        id="change-text">Cambiar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="item mt-4">
+                                            <div class="delete">
+                                                <div class="image-body">
+                                                    <p
+                                                        class="card-text text-center fw-bold h1 year">1453</p>
+                                                </div>
+                                                <div class="line my-4"></div>
+                                                <div class="info p-2">
+                                                    <p class="fw-bold h4 text-justify title">
+                                                        Termina edad media</p>
+                                                    <p class="text-justify text">La Edad Media
+                                                        termina con la caída del Imperio Bizantino (o Imperio Romano de
+                                                        Oriente) en 1453.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer border-0">
+                                <button type="button" class="btn btn-sm btn-light fw-bold"
+                                    data-bs-dismiss="modal">Guardar</button>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-2 p-2 h-100">
-                        <div class="d-flex flex-column align-items-center gap-4">
-
-                            <p class="m-0 fw-bold">Año</p>
-                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
-                                name="color" id="color-year">
-
-                            <p class="m-0 fw-bold year">1453</p>
-                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-year">Cambiar</button>
-                        </div>
-                    </div>
-
-                    <div class="col-2 p-2 h-100">
-                        <div class="d-flex flex-column align-items-center gap-4">
-
-                            <p class="m-0 fw-bold">Título</p>
-                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
-                                name="color" id="color-title">
-
-                            <p class="m-0 fw-bold title">Termina edad media..</p>
-                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-title">Cambiar</button>
-                        </div>
-                    </div>
-
-                    <div class="col-2 p-2 h-100">
-                        <div class="d-flex flex-column align-items-center gap-4">
-
-                            <p class="m-0 fw-bold">Cuerpo de texto</p>
-                            <input class="form-control form-control-color border-0 bg-transparent" type="color"
-                                name="color" id="color-text">
-                            <p class="m-0 text">La edad media termina...</p>
-                            <button class="btn btn-sm btn-dark mt-2" type="button" id="change-text">Cambiar</button>
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
-
         </div>
 
         <div class="row">
@@ -88,8 +123,15 @@
                 </div>
             </div>
             <div class="col-12 my-4 text-center">
-                <button id="add-item" class="btn btn-sm btn-light mt-4 fw-bold" type="button">Agregar un nuevo evento <i class="ms-2 bi bi-plus"></i></button>
-                <button id="btn-capture" class="btn btn-sm btn-light mt-4 fw-bold d-none">Descargar <i class="ms-2 bi bi-download"></i></button>
+                <button id="add-item" class="btn btn-sm btn-light mt-4 fw-bold" type="button">Agregar un nuevo evento <i
+                        class="ms-2 bi bi-plus"></i></button>
+
+                <button id="btn-capture" class="btn btn-sm btn-light mt-4 fw-bold d-none">Descargar <i
+                        class="ms-2 bi bi-download"></i></button>
+                <button id="btn-modal" type="button" class="btn btn-sm btn-light mt-4 fw-bold d-none"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="bi bi-gear-fill"></i>
+                </button>
             </div>
         </div>
     </div>

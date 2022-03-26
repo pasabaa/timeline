@@ -64,3 +64,8 @@ body {
 .text-justify {
     text-align: justify;
 }
+
+.bg-dark-blur {
+    background-color: rgba(220, 220, 220, 0.5);
+    backdrop-filter: blur(10px);
+}
