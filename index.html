@@ -14,33 +14,57 @@
 </head>
 
 <body>
-    <div class="container">
+
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 mt-4 py-4">
-                <h1 class="display-1 fw-bold">Línea del Tiempo</h1>
-                <p class="text-muted">Podrás realizar sencillas y simples lineas del tiempo con tan solo unos clics</p>
-                  <button class="btn btn-sm btn-light fw-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    Más información
-                  </button>
-                  
-                  <div class="offcanvas offcanvas-start border-0 p-2 bg-dark text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header">
-                      <h1 class="fw-bold" id="offcanvasExampleLabel"><i class="bi bi-info-circle-fill"></i> Información</h1>
-                      <button type="button" class="btn-close text-reset btn-sm btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body text-justify">
-                      <p class="fw-bold">Acerca de esta herramienta</p>
-                      <p class="text-muted">Es una herramienta simple para crear una línea del tiempo básica con los elementos principales que la caracterizan.</p>
-
-                      <p class="fw-bold">Recomendaciones y datos</p>
-                      <p class="text-muted">Se recomienda utilizar imágenes del mismo tamaño para seguir un orden y los elementos no se desborden.</p>
-                      <p class="text-muted">Puedes cambiar el estilo de diferentes elementos dando clic en el icono de configuración <i class="bi bi-gear-fill"></i> en el futuro se añadirán más funciones para una mejor personalización.</p>
-                      <p class="text-muted">Puedes colocar los eventos que desees, además, los títulos y el texto no tiene un límite.</p>
-
+            <div class="col-12 p-0">
+                <div class="card text-white p-0 border-0">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://picsum.photos/1920/1080?random=1" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://picsum.photos/1920/1080?random=2" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://picsum.photos/1920/1080?random=3" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                    <div class="card-img-overlay bg-light-blur d-flex align-items-center justify-content-center">
+                        <div class="p-4 text-center">
+                            <h1 class="display-1 fw-bold text-dark">Línea del Tiempo</h1>
+                            <p class="text-muted my-4">Podrás realizar sencillas y simples lineas del tiempo con tan solo unos clics</p>
+                              <button class="btn btn-sm btn-dark fw-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                Más información
+                              </button>
+                              
+                              <div class="offcanvas offcanvas-start border-0 p-2 bg-dark text-white" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header">
+                                  <h1 class="fw-bold" id="offcanvasExampleLabel"><i class="bi bi-info-circle-fill"></i> Información</h1>
+                                  <button type="button" class="btn-close text-reset btn-sm btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body text-justify">
+                                  <p class="fw-bold">Acerca de esta herramienta</p>
+                                  <p class="text-muted">Es una herramienta simple para crear una línea del tiempo básica con los elementos principales que la caracterizan.</p>
+            
+                                  <p class="fw-bold">Recomendaciones y datos</p>
+                                  <p class="text-muted">Se recomienda utilizar imágenes del mismo tamaño para seguir un orden y los elementos no se desborden.</p>
+                                  <p class="text-muted">Puedes cambiar el estilo de diferentes elementos dando clic en el icono de configuración <i class="bi bi-gear-fill"></i> en el futuro se añadirán más funciones para una mejor personalización.</p>
+                                  <p class="text-muted">Puedes colocar los eventos que desees, además, los títulos y el texto no tiene un límite.</p>
+            
+                                </div>
+                              </div>
+                        </div>
                     </div>
                   </div>
             </div>
+        </div>
+    </div>
 
+    <div class="container mt-4 py-4">
+        <div class="row">
             <div class="col-12">
                 <!-- Modal -->
                 <div class="modal fade bg-dark-blur" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
